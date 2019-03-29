@@ -1,0 +1,141 @@
+.nav__active-page {
+    display: none;
+}
+
+.nav {
+    margin-left: 30px;
+    flex-basis: 100%;
+}
+
+.nav__list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__list--g {
+    flex-direction: row;
+}
+
+.nav__list--v {
+    flex-direction: column;
+}
+
+.nav__item--active {
+    border-bottom: 3px solid $brown;
+}
+
+.nav__link {
+    color: $white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: $main-font-bold;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    display: block;
+    padding: 29px 0;
+    &:hover {
+        color: $brown;
+        .nav__img {
+            fill: $brown;
+        }
+    }
+    &:active {
+        color: $link-dactive;
+    }
+}
+
+.nav__item--login {
+    flex-basis: 19%;
+    text-align: right;
+}
+
+.nav__text {
+    padding-left: 13px;
+}
+.nav__img {
+    fill: #4c4c4c;
+    width: 16px;
+    height: 16px;
+}
+
+
+@media only screen and (max-width: $desktop) {
+    .nav__text {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: $tablet) {
+    .nav {
+        margin: 0 19px;
+    }
+
+    .nav__item--login {
+        flex-basis: auto;
+    }
+}
+@media only screen and (max-width: $phone) {
+    .nav {
+        display: none;
+        margin: 0;
+    }
+
+    .nav__active-page {
+        display: flex;
+        flex-basis: calc(100% - 20px);
+        justify-content: center;
+        align-items: center;
+        color: $white;
+        font-family: $main-font-bold;
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+    .nav__active-page--none {
+        display: none;
+    }
+    .nav__active-text {
+        margin-left: 60px;
+    }
+
+    .nav__list {
+        background-color: $brown;
+    }
+    .nav__item {
+        border-bottom: 1px solid $dark-brown;
+    }
+    .nav__link {
+        padding: 18px 0;
+        padding-left: 21px;
+        box-shadow: inset 8px 0 8px -4px rgba(0, 0, 0, 0.3);
+        &:hover {
+            background-color: $link-hover;
+            color: $white;
+
+        }
+        &:active {
+            background-color: $dark-brown;
+            color: $link-mactive;
+        }
+    }
+    .nav--active {
+        display: block;
+    }
+    .nav__item--login {
+        text-align: left;
+    }
+    .nav__link--login {
+        background-color: $dark-brown;
+    }
+    .nav__img {
+        fill: $link-mactive;
+    }
+    .nav__text {
+        display: inline;
+        font-family: $main-font;
+        text-transform: capitalize;
+    }
+
+}
+

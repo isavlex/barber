@@ -1,0 +1,36 @@
+
+.header {
+    // @include bg($back-desktop);
+}
+
+.header__logo-mobile {
+    display: none;
+}
+
+.nav__wrap {
+    display: flex;
+    justify-content: space-between;
+    min-height: 85px;
+}
+
+@media only screen and (max-width: $phone) {
+    .header__logo-mobile {
+        height: 80px;
+        background-color: $dark-gray;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header__logo-m-img {
+        fill: $white;
+    }
+
+    .nav__wrap {
+        min-height: auto;
+        max-height: 50px;
+        background-color: $brown;
+        // justify-content: flex-end;
+    }
+
+}

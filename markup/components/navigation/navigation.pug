@@ -1,0 +1,17 @@
+//data - data of object data in data/data.js (navigation.items)
+//mod - default "g" (gorizontal menu), "v" - vertical menu
+
+
+mixin navigation(data, mod="g")
+    
+    nav(role="navigation" class="nav")
+            ul(class="nav__list " + "nav__list--" + mod )
+                each link, text in data
+                    li.nav__item
+                        a(href= link class="nav__link")= text
+                li.nav__item.nav__item--login
+                    a(href="#" class="nav__link nav__link--login" title="Войти")
+                        != pugHelpers.Icon.call(locals, {iconName: 'login', className: 'nav__img', iconWidth: '35', iconHeight: '16'})
+                        span.nav__text.
+                            Войти
+

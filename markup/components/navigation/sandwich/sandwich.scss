@@ -1,0 +1,60 @@
+.sandwich__wrap {
+    width: 70px;
+    height: 50px;
+    display: none;
+    background-color: $dark-brown;
+    @media screen and (max-width: $phone) {
+        cursor: pointer;
+        display: flex;
+    }
+    &:hover {
+        background-color: $sandwich-hover;
+    }
+}
+
+.sandwich {
+    cursor: pointer;
+    height: 20px;
+    position: relative;
+    z-index: 10;
+    width: 36px;
+    margin: auto;
+}
+
+.sandwich--active .sandwich__line--top {
+    top: 10px;
+    transform: rotate(45deg);
+}
+
+.sandwich--active .sandwich__line--middle {
+    opacity: 0;
+}
+
+.sandwich--active .sandwich__line--bottom {
+    top: 10px;
+    transform: rotate(-45deg);
+}
+
+
+.sandwich--active .sandwich__line {
+    background-color: $link-mactive;
+}
+
+.sandwich__line {
+    background-color: $white;
+    display: block;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transition: all linear .4s;
+    width: 100%;
+    &--top {
+        top: 0;
+    }
+    &--middle {
+        top: 9px;
+    }
+    &--bottom {
+        top: 18px;
+    }
+}

@@ -1,0 +1,16 @@
+include ../navigation/navigation.pug
+include ../navigation/sandwich/sandwich.pug
+
+mixin header(data)
+    header.header
+        .header__logo-mobile
+            a(href="#")
+                != pugHelpers.Icon.call(locals, {iconName: 'logo-m', className: 'header__logo-m-img', iconWidth: '226', iconHeight: '30'})
+        .nav__wrap
+            .nav__active-page
+                span.nav__active-text Главная
+            +sandwich()
+            +navigation(navigation.items)
+        
+
+
