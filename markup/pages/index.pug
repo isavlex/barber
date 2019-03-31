@@ -4,6 +4,7 @@ html(class="no-js", lang="ru")
     include ../components/head/head.pug
     include ../components/header/header.pug
     include ../components/banner/banner.pug
+    include ../components/statistics/statistics.pug
     include ../components/footer/footer.pug
 
     head
@@ -14,6 +15,7 @@ html(class="no-js", lang="ru")
         section.wrap.wrap--black
             +header()
             +banner()
+            +statistics()
 
         script(src='%=static=%js/separate-js/svg4everybody.min.js')
         script svg4everybody();

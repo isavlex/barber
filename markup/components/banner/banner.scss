@@ -4,10 +4,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 650px;
+    min-height: 655px;
     padding-top: 55px;
     margin: 0 -120px;
     flex-direction: column;
+
+    background-image: url(%=static=%/general/back-desktop-1x.jpg);
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .banner__logo-img {
@@ -18,3 +23,26 @@
 .banner__logo-mobile {
     display: none;
 }
+
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .banner {
+        background-image: url(%=static=%/general/back-desktop-2x.jpg);
+    }
+}
+@media only screen and (max-width: $lg-tablet) {
+    .banner {
+        margin: 0 -60px;
+    }
+}
+@media only screen and (max-width: $tablet) {
+    .banner {
+        min-height: 396px;
+        margin: 0;
+    }
+}
+@media only screen and (max-width: $phone) {
+    .banner {
+        display: none;
+    }
+}
+
