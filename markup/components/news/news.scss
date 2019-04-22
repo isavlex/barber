@@ -1,0 +1,194 @@
+.news {
+    padding: 0 0 86px;
+    // & > :not(:first-child) > .news__header {
+    //     margin-top: 55px;
+    // }
+}
+
+.news__section {
+    position: relative;
+    padding-top: 55px;
+}
+
+.news__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    margin-left: 5.9%;
+    max-height: 50px;
+
+}
+
+
+.news__header .text-h2 {
+    text-transform: uppercase;
+}
+
+.text--news {
+    font-size: 18px;
+    color: $black;
+}
+
+.news__stocks {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 40px;
+    border-bottom: 1px solid $news-gray;
+}
+
+
+.news__stock {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 29%;
+}
+
+.news__date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 19px;
+    position: relative;
+    padding: 9px 12px;
+    background-color: $black;
+    color: $white;
+    width: 50px;
+    max-height: 50px;
+    margin-right: 20px;
+    &::after {
+        display: block;
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 10px 25px 0 25px;
+        border-color: $black transparent transparent transparent;
+    }
+}
+.news__day {
+    font-size: 30px;
+}
+
+.news__month {
+    font-size: 16px;
+    z-index: 100;
+    opacity: 0.8;
+}
+
+.news__reviews {
+
+}
+
+.news__review {
+    display: flex !important;
+    justify-content: center;
+}
+
+.news__review-wrap {
+    display: flex;
+    justify-content: center;
+}
+.news__photo {
+    width: 249px;
+    height: 166px;
+}
+.news__person {
+    flex-basis: 56%;
+    padding: 30px 5.8%;
+}
+
+.news__person .text-h4 {
+    margin-bottom: 20px;
+}
+
+@include breakpoint-dfirst(desktop) {
+
+    .news__header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .news__stock {
+        flex-basis: 46%;
+        &:nth-child(n+3) {
+            display: none;
+        }
+    }
+}
+@include breakpoint-dfirst(tablet) {
+    .news__review-wrap {
+        flex-basis: 85%;
+        display: flex !important;
+        align-items: center;
+        justify-content: space-around;
+        border-top: 1px solid $news-gray;
+        border-bottom: 1px solid $news-gray;
+        padding-left: 20px;
+    }
+    .news__review {
+        align-items: center;
+    }
+    .news__img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    .news__photo {
+        width: 150%;
+        height: auto;
+        transform: translatex(-16.6%);
+    }
+
+    .news__person {
+        flex-basis: 81%;
+    }
+
+    .news__dots {
+        display: flex;
+        justify-content: center;
+    }
+}
+@include breakpoint-dfirst(phone) {
+    .news__header {
+        justify-content: center;
+    }
+    .news__stocks {
+        flex-direction: column;
+        padding: 0 10% 80px;
+    }
+    .news__stock {
+        padding: 25px 0;
+        &:not(:last-child) {
+            border-bottom: 1px solid $news-gray;
+        }
+
+    }
+
+    .button--news {
+        position: absolute;
+        left: 10%;
+        bottom: 32px;
+        width: 80%;
+    }
+    .news__review-wrap {
+        border: none;
+        padding: 0;
+        flex-basis: auto;
+    }
+    .news__img {
+        border-radius: 0%;
+        border: 1px solid $news-gray;
+    }
+
+    .news__photo {
+        display: none;
+    }
+    .button--reviews {
+        display: none;
+    }
+}

@@ -1,0 +1,130 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0;
+    background-color: $dark-gray;
+}
+
+.footer__contacts {
+    flex: 1;
+}
+
+.footer__social {
+    flex: 1;
+}
+
+.footer__logo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+}
+
+.footer__icons {
+    display: flex;
+    justify-content: center;
+}
+
+.footer__icon {
+    padding: 16px ;
+    border: 1px solid #3e3e3e;
+    &:not(:last-child) {
+        margin-right: 6px;
+    }
+}
+
+.footer__svg {
+    fill: $white;
+}
+
+.footer__link {
+    @include bold();
+    padding: 18px 25px;
+    border: 1px solid #3e3e3e;
+    display: inline-block;
+}
+
+@include breakpoint-dfirst(tablet) {
+    .footer {
+        flex-wrap: wrap;
+    }
+    .footer__contacts {
+        flex-basis: 60%;
+    }
+    .footer__social {
+        flex-basis: 100%;
+        order: 3;
+    }
+
+    .footer__social > p {
+        display: none;
+    }
+    .footer__logo {
+        flex-basis: auto;
+    }
+
+    .footer__icon {
+        flex: 1;
+        text-align: center;
+        margin-top: 20px;
+        margin-right: 0 !important;
+    }
+
+    .footer__svg {
+        width: 35px;
+        height: 35px;
+    }
+
+}
+
+@include breakpoint-dfirst(phone) {
+    .footer {
+        flex-direction: column;
+    }
+    .footer__contacts {
+        flex-basis: auto;
+        text-align: center;
+        padding: 0 10%;
+    }
+    .footer__social {
+        flex-basis: auto;
+        margin-bottom: 25px;
+        order: 0;
+    }
+    .footer__icons {
+        width: 100%;
+
+
+    }
+    .footer__icon {
+        flex-basis: 33.33%;
+        padding: 25px 0;
+        text-align: center;
+    }
+
+    .footer__logo {
+        flex-basis: auto;
+        align-items: center;
+        padding: 0 10%;
+    }
+
+    .footer__wrap {
+        width: 100%;
+    }
+    .footer__wrap > .text-sm {
+        margin-bottom: 15px;
+    }
+
+    .footer__link {
+        width: 100%;
+        display: block;
+    }
+
+    .footer__phone {
+        padding: 15px 20%;
+        border: 1px solid #3e3e3e;
+        display: block;
+        width: 100%;
+    }
+}

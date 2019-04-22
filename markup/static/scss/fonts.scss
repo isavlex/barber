@@ -36,3 +36,11 @@ $CustomFont: 'CustomFont', Helvetica, Arial, sans-serif;
     font-style: normal;
 
 }
+
+
+@mixin regular() {
+    font-family: $main-font , Arial, serif;
+}
+@mixin bold() {
+    font-family: $main-font-bold , Arial, serif;
+}

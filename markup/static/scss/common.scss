@@ -2,6 +2,7 @@
 
 // Common styles of the project
 
+
 *, *:before, *:after {
     box-sizing: border-box;
     margin: 0;
@@ -9,28 +10,130 @@
 }
 
 body {
-    background-color: $coommonbg-color;
+    // background-color: ;
 }
 
 
-.wrap {
-    max-width: 1200px;
+
+.common-wrap {
     width: 100%;
-    padding: 0 120px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
+.wrap {
+    padding: 0 10%;
+}
+
+.wrap--gray {
+    background-color: $coommonbg-color;
+}
+.wrap--dark-gray {
+    background-color: $dark-gray;
+}
 .wrap--black {
     background-color: $black;
 }
 
-@media only screen and (max-width: $lg-tablet) {
-    .wrap {
-        padding: 0 60px;
+.wrap--fuild {
+    padding: 0;
+}
+
+.wrap--light-gray {
+    background-color: $light-gray;
+}
+//text styles
+
+.center {
+    text-align: center;
+}
+
+.text {
+    @include regular();
+    font-size: 20px;
+    font-weight: 400;
+    color: $white;
+}
+
+.text-sm {
+    @include regular();
+    font-size: 18px;
+    font-weight: 400;
+    color: $white;
+    margin-bottom: 10px;
+}
+
+.text-sm--indent {
+    margin-bottom: 25px;
+}
+
+.text--bold {
+    @include bold();
+}
+.text--uppercase {
+    text-transform: uppercase;
+}
+
+
+.text-h2 {
+    @include bold();
+    font-size: 40px;
+    font-weight: 400;
+    color: $black;
+    margin: 0 0 0.3em;
+}
+
+.text-h3 {
+    @include bold();
+    font-size: 30px;
+    color: $white;
+}
+
+.text-h4 {
+    @include bold();
+    font-size: 24px;
+}
+
+.text--black {
+    color: $black;
+}
+
+.text--gray {
+    color: $gray;
+}
+
+.text--big {
+    @include bold();
+    font-size: 72px;
+}
+
+.link {
+    @include regular();
+    color: $white;
+    text-decoration: none;
+}
+//--------------
+
+@include breakpoint-dfirst(tablet) {
+    .wrap--fluid-tablet {
+        padding: 0;
+    }
+
+    .text-h2 {
+        font-size: 30px;
     }
 }
-@media only screen and (max-width: $tablet) {
-    .wrap {
+@include breakpoint-dfirst(phone) {
+
+    .wrap--fluid-phone {
         padding: 0;
+    }
+
+    .display-none--phone {
+        display: none;
+    }
+
+    .center--phone {
+        text-align: center;
     }
 }

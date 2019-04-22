@@ -1,0 +1,18 @@
+mixin features(data)
+    .features
+        .feature
+            != pugHelpers.Icon.call(locals, {iconName: 'fast', className: 'feature__img', iconWidth: '95', iconHeight: '95'})
+            section.feature__description
+                h3.text-h3 Быстро
+                p.text Мы делаем свою работу быстро! Два часа пролетят незаметно и вы — счастливый обладатель стильной стрижки-минутки.
+        .feature
+            != pugHelpers.Icon.call(locals, {iconName: 'cool', className: 'feature__img', iconWidth: '95', iconHeight: '95'})
+            section.feature__description
+                h3.text-h3 Круто
+                p.text Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино. Во всяком случае внешне.
+
+        .feature
+            != pugHelpers.Icon.call(locals, {iconName: 'expensive', className: 'feature__img', iconWidth: '95', iconHeight: '95'})
+            section.feature__description
+                h3.text-h3 Дорого
+                p.text Наши мастера — профессионалы своего делаи не могут стоить дёшево. К тому же, разве цена не даёт определённый статус?

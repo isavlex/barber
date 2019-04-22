@@ -1,0 +1,52 @@
+mixin news(data)
+    section.news
+        section.news__section
+            section.news__header
+                h2.text-h2 Новости и акции
+                button.button.button--news Показать все
+            section.news__stocks
+                article.news__stock
+                    .news__date
+                        span.news__day 29
+                        span.news__month сент
+                    .news__description
+                        p.text-sm.text--news Нам наконец завезли Ягермайстер! Теперь вы можете пропусить стаканчик во время стрижки.
+                article.news__stock
+                    .news__date
+                        span.news__day 19
+                        span.news__month сент
+                    .news__description
+                        p.text-sm.text--news В нашей команде пополнение, Борис «Бритва» Стригунец, пополнил наши стройные ряды. Спешите записаться!
+                article.news__stock
+                    .news__date
+                        span.news__day 9
+                        span.news__month сент
+                    .news__description
+                        p.text-sm.text--news Все дорожает, а наши стрижки нет! Как так? Приходите, постригитесь и узнаете, в чем здесь подвох!
+        section.news__section
+            section.news__header
+                h2.text-h2 Отзывы о нас
+                button.button.button--reviews Оставить свой
+            section.news__reviews
+                article.news__review
+                    .news__review-wrap
+                        .news__img
+                            img(src="%=static=%img/content/barker1x.png" srcset="%=static=%img/content/barker2x.png 2x" class="news__photo", alt="фото отзывающегося")
+                        .news__person
+                            h4.text-h4 Трэвис Баркер
+                            p.text-sm.text--news Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!
+                article.news__review
+                    .news__review-wrap
+                        .news__img
+                            img(src="%=static=%img/content/barker1x.png" srcset="%=static=%img/content/barker2x.png 2x" class="news__photo", alt="фото отзывающегося")
+                        .news__person
+                            h4.text-h4 Трэвис Баркер
+                            p.text-sm.text--news Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!
+                article.news__review
+                    .news__review-wrap
+                        .news__img
+                            img(src="%=static=%img/content/barker1x.png" srcset="%=static=%img/content/barker2x.png 2x" class="news__photo", alt="фото отзывающегося")
+                        .news__person
+                            h4.text-h4 Трэвис Баркер
+                            p.text-sm.text--news Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!
+            .news__dots

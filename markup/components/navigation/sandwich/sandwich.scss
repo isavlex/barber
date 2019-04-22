@@ -3,7 +3,7 @@
     height: 50px;
     display: none;
     background-color: $dark-brown;
-    @media screen and (max-width: $phone) {
+    @media (max-width: $phone) {
         cursor: pointer;
         display: flex;
     }

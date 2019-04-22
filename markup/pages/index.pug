@@ -5,20 +5,35 @@ html(class="no-js", lang="ru")
     include ../components/header/header.pug
     include ../components/banner/banner.pug
     include ../components/statistics/statistics.pug
+    include ../components/features/features.pug
+    include ../components/news/news.pug
+    include ../components/triangle/triangle.pug
     include ../components/footer/footer.pug
 
     head
         +head(head.defaults)
     body.page
         |%=symbols=%
-
-        section.wrap.wrap--black
-            +header()
-            +banner()
-            +statistics()
+        .common-wrap
+            section.wrap.wrap--fluid-tablet.wrap--black
+                +header()
+            section.wrap--fuild.wrap--gray
+                +banner()
+                .wrap.wrap--fluid-phone
+                    +statistics()
+            section.wrap.wrap--fluid-phone.wrap--gray
+                +features()
+            .wrap--fuild.wrap--light-gray
+                +triangle('features__triangle')
+            section.wrap.wrap--fluid-phone.wrap--light-gray
+                +news()
+            .wrap--fuild.wrap--dark-gray
+                +triangle('news__triangle')
+            .wrap.wrap--dark-gray.wrap--fluid-phone
+                +footer()
 
         script(src='%=static=%js/separate-js/svg4everybody.min.js')
-        script svg4everybody();
+        //- script svg4everybody();
 
         //- Main scripts. You can replace it, but I recommend you to leave it here
         script(src='%=static=%js/main%=hash=%%=min=%.js')

@@ -62,13 +62,13 @@
 }
 
 
-@media only screen and (max-width: $desktop) {
+@include breakpoint-dfirst(desktop) {
     .nav__text {
         display: none;
     }
 }
 
-@media only screen and (max-width: $tablet) {
+@include breakpoint-dfirst(tablet) {
     .nav {
         margin: 0 19px;
     }
@@ -77,7 +77,7 @@
         flex-basis: auto;
     }
 }
-@media only screen and (max-width: $phone) {
+@include breakpoint-dfirst(phone) {
     .nav {
         display: none;
         margin: 0;
@@ -110,11 +110,6 @@
         padding: 18px 0;
         padding-left: 21px;
         box-shadow: inset 8px 0 8px -4px rgba(0, 0, 0, 0.3);
-        &:hover {
-            background-color: $link-hover;
-            color: $white;
-
-        }
         &:active {
             background-color: $dark-brown;
             color: $link-mactive;

@@ -1,2 +1,25 @@
 mixin footer(data)
     footer.footer
+        .footer__contacts
+            p.text-sm.text--uppercase.text--bold.text-sm--indent
+                strong Барбершоп Бородинский
+
+            p.text-sm г. Санкт-Петербург, ул. Большая Конюшенная 19/8
+            p.text-sm.center--phone <span class="display-none--phone">Тел:</span><a href="tel:+78125556666" class="link footer__phone"> +7 (812) 555-66-66</a>
+        .footer__social
+            p.text-sm.center.text-sm--indent Давайте дружить!
+            .footer__icons
+                .footer__icon
+                    a(href="")
+                        != pugHelpers.Icon.call(locals, {iconName: 'vk', className: 'footer__svg footer__svg--vk', iconWidth: '20', iconHeight: '20'})
+                .footer__icon
+                    a(href="")
+                        != pugHelpers.Icon.call(locals, {iconName: 'facebook', className: 'footer__svg footer__svg--fb', iconWidth: '20', iconHeight: '20'})
+                .footer__icon
+                    a(href="")
+                        != pugHelpers.Icon.call(locals, {iconName: 'instagram', className: 'footer__svg footer__svg--in', iconWidth: '20', iconHeight: '20'})
+
+        .footer__logo
+            .footer__wrap
+                p.text-sm.text-sm--indent.center Разработано:
+                a(href="" class="link center footer__link") HTML ACADEMY

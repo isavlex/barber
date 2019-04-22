@@ -1,0 +1,22 @@
+.features__triangle {
+    fill: $coommonbg-color;
+}
+
+.svg-news__triangle {
+    display: none;
+}
+
+
+@include breakpoint-dfirst(phone) {
+    .features__triangle {
+        fill: $dark-gray;
+    }
+
+    .svg-news__triangle {
+        display: block;
+    }
+
+    .news__triangle {
+        fill: $light-gray;
+    }
+}

@@ -1,6 +1,6 @@
 
 .header {
-    // @include bg($back-desktop);
+    background-color: $black;
 }
 
 .header__logo-mobile {
@@ -13,7 +13,8 @@
     min-height: 85px;
 }
 
-@media only screen and (max-width: $phone) {
+@include breakpoint-dfirst(phone) {
+    
     .header__logo-mobile {
         height: 80px;
         background-color: $dark-gray;
@@ -30,7 +31,7 @@
         min-height: auto;
         max-height: 50px;
         background-color: $brown;
-        // justify-content: flex-end;
+
     }
 
 }
