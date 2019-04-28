@@ -1,0 +1,14 @@
+mixin form(data)
+    form(action="" class="login-form")
+        h1.text-h2.text--uppercase.center Личный кабинет
+        p.text.text--black.center Введите свой логин и пароль, чтобы войти
+        input(type="text" class="login-form__login login-form__input" placeholder="Логин")
+        input(type="password" class="login-form__password login-form__input" placeholder="Пароль")
+        .login-form__wrap
+            label(class="login-form__label login-form__wrap")
+                input(type="checkbox" id="login-form__check" class="login-form__check")
+                span.login-form__checkbox.center
+                span.login-form__desc Запомните меня
+            a(href="#" class="login-form__forgot") Я забыл пароль!
+        button(class="login-form__button")
+        .login-form__close

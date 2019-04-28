@@ -51,5 +51,4 @@ class Slider {
 
 
 
-// export default featuresSlider;
 export default Slider;

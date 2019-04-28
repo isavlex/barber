@@ -114,6 +114,9 @@
             background-color: $dark-brown;
             color: $link-mactive;
         }
+        &:hover {
+            color: $white;
+        }
     }
     .nav--active {
         display: block;

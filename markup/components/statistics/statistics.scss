@@ -21,7 +21,7 @@
 }
 
 .statistics__tagline {
-    flex-grow: 1;
+    flex-basis: 33.33%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -33,7 +33,7 @@
 .statistics__indicators {
     display: flex;
     flex-wrap: wrap;
-    flex-grow: 2;
+    flex-basis: 66.66%;
 }
 
 .statistics__indicator {

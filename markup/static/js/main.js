@@ -1,11 +1,13 @@
 'use strict';
 
-import sandwichMenu from 'components/navigation/sandwich/sandwich';
+import {sandwichMenu} from 'components/navigation/sandwich/sandwich';
+import getForm from 'components/form/form';
 // import featuresSlider from 'components/features/slider';
 import Slider from './plugins/slider';
 
 
 sandwichMenu();
+getForm();
 // featuresSlider();
 svg4everybody({
     nosvg: true, // shiv <svg> and <use> elements and use image fallbacks

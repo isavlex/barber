@@ -1,6 +1,7 @@
 doctype html
 html(class="no-js", lang="ru")
 
+    include ../components/form/form.pug
     include ../components/head/head.pug
     include ../components/header/header.pug
     include ../components/banner/banner.pug
@@ -15,6 +16,7 @@ html(class="no-js", lang="ru")
     body.page
         |%=symbols=%
         .common-wrap
+            +form()
             section.wrap.wrap--fluid-tablet.wrap--black
                 +header()
             section.wrap--fuild.wrap--gray
